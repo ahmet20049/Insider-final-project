@@ -1,0 +1,444 @@
+
+<!-- Ahmet Bahar'ın yaptı kısım E-posta ahmetbahar.0987@gmail.com-->
+<!DOCTYPE html>
+<html>
+<head> 
+<link rel="stylesheet" href="proje.css">
+  <title>Hoş Geldiniz!</title>
+  <style>
+   
+
+   .kutu {
+        width: 1100px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .kutu img {
+        position: absolute;
+        top: 10%;
+        left: 4%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .kutu img.aktif {
+        opacity: 1;
+      }
+    .container {
+      display: flex;
+      align-items: center;
+      padding: 1px;
+    }
+
+    .left-content {
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .left-content h2 {
+      font-size: 15px;
+      margin-bottom: 7px;
+      border: 13px;
+    }
+
+    .right-content {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+    }
+
+    .right-content p {
+      font-size: 15px;
+      margin: 0;
+      margin-right: 7px;
+      align-items: center;
+    }
+
+    .social-buttons {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    .social-button {
+      display: inline-block;
+      background-color: rgb(172, 172, 39);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
+    .social-button:hover {
+      background-color: rgb(172, 172, 39);
+    } /*arama kısımı css**/
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    .container1 {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      align-items: left;
+    }
+
+    .logo {
+      flex-shrink: 0;
+      align-items: left;
+    }
+
+    .logo img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .eğitimler {
+      margin-left: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color:rgb(172, 172, 39) ;
+    }
+
+    .alt-menu {
+      display: list-item;
+      margin-top: 7px;
+      color: blue;
+    }
+
+    .alt-menu a {
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .eğitimler:hover + .alt-menu {
+      display: block;
+    }
+
+    .arama-kutusu {
+      margin-left: auto;
+      width: 1100px;
+      height: 50px;
+      font-size: 18px;
+      padding: 5px;
+      text-align: center;
+    }/*///*****/
+
+  </style>
+  <style>* {
+    font-family: Helvetica;
+}
+
+body {
+    transition: background-color 0.5s, color 0.5s, font-family 0.5s;
+}
+
+
+#togBut {
+    border: 10px solid white;
+    border-radius: 25px;
+    background: #dead28;
+    padding: 15px;
+}
+
+#togBut:hover {
+    background: grey;
+    color: black;
+}
+
+.night-mode {
+    color: #fff;
+    background-color: #000;
+    font-family: "Times New Roman", serif;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-content">
+      <h2>Future Software Developers Hoş Geldiniz!</h2>
+    </div>
+    <div class="right-content">
+      <p>HAKKIMIZDA</p>
+      <p>KARİYER REHBERİ</p>
+      <p>HABERLER</p>
+      
+      </div>
+        <script>
+         (function() {
+             function toggleNightMode() {
+                 var elem = document.getElementById(this.dataset.target);
+                 var body = document.body;
+                 
+                 if (this.dataset.mode === 'off') {
+                     body.classList.remove('night-mode');
+                     this.dataset.mode = 'on';
+                 } else {
+                     body.classList.add('night-mode');
+                     this.dataset.mode = 'off';
+                 }
+             }
+             
+             document.getElementById('togBut').addEventListener('click', toggleNightMode);
+         })();
+     </script>
+      
+     </div>
+  </div>
+  
+<!--arama kısmı-->
+<!-- Ahmet Bahar'ın yaptı kısım E-posta ahmetbahar.0987@gmail.com-->
+<div class="container1">
+    <div class="logo">
+      <img src="resim/logo.png" alt="Logo">
+    </div>
+    <div class="eğitimler" onclick="toggleAltMenu()">Eğitimler</div>
+    <div class="alt-menu" id="altMenu">
+      <a href="#">Front-End</a>
+      <a href="#">Backend</a>
+    </div>
+    <input type="text" class="arama-kutusu" placeholder="Ara...">
+    
+  </div>
+
+  <script>
+    function toggleAltMenu() {
+      var altMenu = document.getElementById("altMenu");
+      altMenu.style.display = altMenu.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
+   <!-- yagız sedatkurt kısmı yagizsedatkurt@gmail.com-->
+
+
+   <div class="kutu">
+    <img src="resim/yedek giriş.png" alt="Fotoğraf 1" class="aktif">
+    <img src="resim/frontend.png" alt="Fotoğraf 2">
+    <img src="resim/backend.png" alt="Fotoğraf 3">
+    <img src="resim/yedek giriş.png" alt="Fotoğraf 4">
+</div>
+
+<script>
+    const kutu = document.querySelector('.kutu');
+    const fotolar = kutu.querySelectorAll('img');
+    let aktifFotoIndex = 0;
+
+    function degistir() {
+        fotolar[aktifFotoIndex].classList.remove('aktif');
+        aktifFotoIndex = (aktifFotoIndex + 1) % fotolar.length;
+        fotolar[aktifFotoIndex].classList.add('aktif');
+    }
+
+    setInterval(degistir, 10000);
+</script>
+
+
+
+
+<script>
+    let slideIndex = [1,1];
+    let slideId = ["mySlides1", "mySlides2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+
+    function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
+    }
+
+    function showSlides(n, no) {
+        let i;
+        let x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) {slideIndex[no] = 1}
+        if (n < 1) {slideIndex[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex[no]-1].style.display = "block";
+    }
+
+    function toggleTheme(theme) {
+        const body = document.querySelector('body');
+        body.classList.toggle('dark-theme', theme === 'dark');
+    }
+</script>
+
+
+
+
+<h2 class="h22">Front-End</h2>
+
+
+
+<div class="container2">
+  <a href="htmleğittimi.html" class="box">
+    <div class="top">
+      <img src="resim/logo3.png" alt="Logo">
+    </div>
+    <div class="content">
+      <h3>HTML ile Web Geliştirme</h3>
+      
+    </div>
+  </a>
+  <a href="csseğitimi.html" class="box">
+    <div class="top">
+      <img src="resim/logoo4.jpg" alt="Logo">
+    </div>
+    <div class="content">
+      <h3>CSS</h3>
+     
+    </div>
+  </a>
+  <a href="jseğittimi.html" class="box">
+    <div class="top">
+      <img src="resim/logo5.png" alt="Logo">
+    </div>
+    <div class="content">
+      <h3>JAVASCRIPT</h3>
+      
+    </div>
+  </a>
+</div>
+
+
+<h2 class="h22">Back-End</h2>
+
+<div class="container">
+  <a href="pythoneğittimi.html" class="box">
+    <div class="top">
+      <img src="resim/python.png" alt="Logo">
+    </div>
+    <div class="content">
+      <h3>Python ile Web geliştirme</h3>
+      
+    </div>
+  </a>
+  <a href="phpeğittimi.html" class="box">
+    <div class="top">
+      <img src="resim/php.png" alt="Logo">
+    </div>
+    <div class="content">
+      <h3>Php ile Web geliştirme</h3>
+     
+    </div>
+  </a>
+  <a href="ceğittimi.html" class="box">
+    <div class="top">
+      <img src="resim/download.jpg" alt="Logo">
+    </div>
+    <div class="content">
+      <h3> C# ile Web geliştirme</h3>
+      
+    </div>
+  </a>
+</div>
+
+
+
+
+
+<h2 class="h22">Oyun Geliştirme</h2>
+
+<div class="container">
+  <a href="oyunpy.html" class="box">
+    <div class="top">
+      <img src="resim/python.png" alt="Logo">
+    </div>
+    <div class="content">
+      <h3>Python ile Oyun geliştirme</h3>
+      
+    </div>
+  </a>
+  <a href="oyunun.html" class="box">
+    <div class="top">
+      <img src="resim/unity.jpg" alt="Logo">
+    </div>
+    <div class="content">
+      <h3>Php ile Web geliştirme</h3>
+     
+    </div>
+  </a>
+  <a href="ceğittimi.html" class="box">
+    <div class="top">
+      <img src="resim/download.jpg" alt="Logo">
+    </div>
+    <div class="content">
+      <h3> C# ile Oyun Geliştirme</h3>
+      
+    </div>
+  </a>
+</div>
+
+
+<!-- Ender Soydemir'ın yaptı kısım E-posta Endersoydemir3452@gmail.com-->
+
+
+<div class="anadiv">   
+  <div class="alt-bilgi">
+      <h2>Hakkımızda</h2>
+      <p>Geleceğin yazılım geliştiricilerini yetiştiren "Future Software Developers" olarak buradayız. Sizi teknoloji çağına hazırlamak ve dijital dünyada güçlü aktörler olmanızı sağlamak için buradayız. En son teknolojileri, uygulamaları ve sektörün önde gelen uzmanlarını sunuyoruz. Projeler geliştirin, deneyim kazanın ve güçlü bir topluluğa katılın. Yazılım dünyasında kendinizi kanıtlayın ve geleceği değiştirin</p>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

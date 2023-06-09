@@ -1,0 +1,103 @@
+<!--Burası tamamen Ahmet Bahar'ın yaptı kısım E-posta ahmetbahar.0987@gmail.com-->
+
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş // Kayıt Ekranı</title> 
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>   
+    <div class="container right-panel-active">
+        <div class="container__form container--signup">
+            <form action="" class="form" id="form1">
+                <h2 class="form__title">Kayıt Ol</h2>
+                <input type="text" placeholder="Kullanıcı Adı" class="input" id="signup-username">
+                <input type="email" placeholder="E-Posta" class="input" id="signup-email">
+                <input type="password" placeholder="Şifre" class="input" id="signup-password">
+                <button class="btn">Kayıt Ol</button>
+            </form>
+        </div>
+
+        <div class="container__form container--signin">
+            <form action="" class="form" id="form2">
+                <h2 class="form__title">Giriş Yap</h2>
+                <input type="email" placeholder="E-Posta" class="input" id="signin-email">
+                <input type="password" placeholder="Şifre" class="input" id="signin-password">
+                <button class="btn">Giriş Yap</button>
+            </form>
+        </div>
+ 
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <button class="btn" id="signIn">Giriş Yap</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <button class="btn" id="signUp">Kayıt Ol</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const signInBtn = document.getElementById("signIn");
+        const signUpBtn = document.getElementById("signUp");
+        const container = document.querySelector(".container");
+
+        signInBtn.addEventListener("click", () => {
+            container.classList.remove("right-panel-active");
+        });
+
+        signUpBtn.addEventListener("click", () => {
+            container.classList.add("right-panel-active");
+        });
+
+        const emailInput = document.querySelector("#form2 input[type='email']");
+        const passwordInput = document.querySelector("#form2 input[type='password']");
+        const warningMessage = document.createElement("div");
+        warningMessage.classList.add("warning-message");
+        const form2 = document.getElementById("form2");
+
+        form2.appendChild(warningMessage);
+
+        form2.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const email = emailInput.value;
+            const password = passwordInput.value;
+            if (email === 'a@' && password === '1') {
+                // Giriş başarılı olduğunda buraya yönlendirme veya işlemleri yapabilirsiniz.
+                console.log("Giriş başarılı");
+                window.location.href = "giris-basarili.html"; // Örnek bir yönlendirme
+            } else {
+                warningMessage.textContent = "Email veya şifre hatalı";
+            }
+        });
+
+        const signUpForm = document.getElementById("form1");
+        const usernameInput = document.getElementById("signup-username");
+        const signupEmailInput = document.getElementById("signup-email");
+        const signupPasswordInput = document.getElementById("signup-password");
+
+        signUpForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const username = usernameInput.value;
+            const email = signupEmailInput.value;
+            const password = signupPasswordInput.value;
+
+            // Verileri local storage'a kaydet
+            localStorage.setItem("username", username);
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+
+            // Kayıt işlemi tamamlandığında buraya yönlendirme veya işlemleri yapabilirsiniz.
+            console.log("Kayıt işlemi tamamlandı");
+            window.location.href = "ANASAYFA.html"; // Örnek bir yönlendirme
+        });
+    </script> 
+</body>
+</html>

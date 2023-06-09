@@ -1,0 +1,236 @@
+<!--Burası tamamen Ahmet Bahar'ın yaptı kısım E-posta ahmetbahar.0987@gmail.com-->
+
+
+<!DOCTYPE html>
+<html>
+ <head> 
+  <style>
+    body {
+      background-color: aliceblue;
+    }
+   
+    .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+        
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-list-item {
+            margin-bottom: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #ffffff;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .course-list-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .course-video {
+            position: relative;
+            padding: 10px;
+        }
+        
+        .course-description {
+            padding: 10px;
+        }
+        
+        .course-video iframe {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+        
+        .course-title {
+            font-size: 20px;
+            color: #333333;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        
+        .course-description p {
+            color: #666666;
+        }
+        
+        .completed {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: green;
+            color: #ffffff;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+        
+        .video-container {
+            display: none;
+        }
+        
+        .video-container.active {
+            display: block;
+        }
+   
+  </style>
+ </head>
+  <body> 
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="jseğittimi.css">
+    <title>JAVASCRIPT Eğitimi</title>
+
+    <!-- Logo and heading -->
+    <div style="display: flex;">
+      <div style="margin-right: 10px;">
+        <img src="resim/logo5.png" alt="Logo" width="450" height="300">
+      </div>
+      <div style="width: 450px;">
+        <br>
+        <br>
+        <br>
+        <h1>JAVASCRIPT</h1>
+        <div class="like-container">
+          <span class="like-icon">&#x1F44D;</span>
+          <span class="like-count">100</span>
+          <span> &#128078;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description section -->
+    <div class="ac">
+      <h1>Açıklama</h1>
+    </div>
+
+    <!-- Eğitim Amacı section -->
+    <div class="kotlar">
+      <div class="kot1">
+        <h2>Eğitim Amacı</h2>
+      </div>
+      <div class="cizgi"></div>
+      <div class="kot1">
+      <li>Sıfırdan ileri seviyeye javascript becerilerinin kazandırılması amaçlanmıştır.</li>
+      </div>
+    </div>
+    <br>
+
+    <!-- Eğitim Özeti section -->
+    <div class="kotlar1">
+      <div class="kot2">
+        <h2>Eğitim Özeti</h2>
+      </div>
+      <div class="cizgi1"></div>
+      <div class="kot2">
+        <li>Sürekli gelişen web teknolojilerinin en popüler ve en olmazsa olmaz dillerinden birisi de Javascript'tir.</li>
+        <li>Eğitim dahilinde sıfırdan en ileri seviyeye kadar Javascript'in mimarisini, hangi alanlarda kullanıldığı, tüm özelliklerini, tüm metotlarını, tüm fonksiyonlarını ve nesne tabanlı programlama yöntemlerini en ayrıntılı şekilde ve bol örneklerle işlenmektedir.</li>
+      </div>
+    </div>
+    <br>
+
+    <!-- Hedef Kitle section -->
+    <div class="kotlar2">
+      <div class="kot3">
+        <h2>Hedef Kitle</h2>
+        <li>Javascript ile sıfırdan ileri düzeye kadar mükemmel dinamik web siteleri geliştirmek isteyen kişiler.</li>
+        <li>Durağan web sayfalarına dinamiklik kazandırmak isteyen kişiler.</li>
+        <li>Web sayfaları dahilinde anlık işlemler yapmak isteyen kişiler.</li>
+        <li>Tüm HTML elementlerine ekti etmek isteyen kişiler.</li>
+        <li>Browser (tarayıcı) oyunu kodlamak isteyen kişiler.</li>
+        <li>Game Engine (oyun motoru) programlarını kullanırken Javascript ile kod yazmak isteyen kişiler.</li>
+      </div>
+
+
+
+      <div class="dugun-temasi">
+        <h1>Javascript Sürümleri</h1>
+        <button onclick="toggleMenu()">Sürümler</button>
+        <ul id="acilir-menu" class="acilir-menu">
+          <li>1995: JavaScript'in doğuşu, Netscape Navigator tarayıcısının bir parçası olarak Brendan Eich tarafından geliştirilmeye başlandı. Başlangıçta "Mocha" olarak adlandırılan dili daha sonra "LiveScript" olarak değiştirildi ve son olarak "JavaScript" olarak adlandırıldı.</li>
+          <li>1996: JavaScript, Netscape Navigator 2.0 ile birlikte yaygın olarak kullanılan bir tarayıcı tabanlı betik dili haline geldi.</li>
+          <li>1997: JavaScript'in standartlaşması amacıyla ECMA International (European Computer Manufacturers Association) tarafından bir komite oluşturuldu. Bu komite, ECMAScript standartını geliştirmek ve yönetmekle görevlendirildi. ECMAScript, JavaScript'in resmi adıdır.</li>
+          <li>1999: ECMAScript 3 yayımlandı ve bu sürüm, JavaScript'in popülerliğini artırdı. Birçok modern tarayıcı tarafından desteklendi ve JavaScript'in temelini oluşturan birçok özelliği tanımladı.</li>
+          <li>2009: ECMAScript 5 yayımlandı. Bu sürüm, daha fazla dil özelliği ve geliştirmeler getirdi. Özellikle, JSON (JavaScript Object Notation) formatının doğal olarak desteklenmesi, yeni dizi işlevleri ve daha güçlü hata işleme yetenekleri gibi özellikler ekledi.</li>
+          <li>2015: ECMAScript 6 (veya ECMAScript 2015) yayımlandı. Bu sürüm, JavaScript'in en önemli güncellemelerinden biri olarak kabul edilir. Yeni dil özellikleri, blok kapsamı değişkenleri, ok işaretçileri, sınıflar, modüller ve yayın abonelik gibi geliştirmeleri içerir. Bu sürüm, modern JavaScript kodlama standartlarının temelini oluşturdu.</li>
+          <li>Sonraki yıllar: ECMAScript standartı, her yıl yeni bir sürümle güncellenmeye başlandı. ECMAScript 2016, 2017, 2018, 2019, 2020 ve 2021 gibi sürümler, yeni dil özellikleri ve iyileştirmeler getirdi. Her bir sürüm, geliştiricilere daha güçlü ve verimli bir JavaScript deneyimi sunmaya çalıştı.</li>
+        
+        
+        
+        </ul>
+      </div>
+    
+      <script>
+        function toggleMenu() {
+          var acilirMenu = document.getElementById("acilir-menu");
+          if (acilirMenu.style.display === "none") {
+            acilirMenu.style.display = "block";
+          } else {
+            acilirMenu.style.display = "none";
+          }
+        }
+      </script>
+
+   <div class="kot">
+        <h2 class="kot-baslik">Eğitimiz</h2>
+        
+        <ul class="ayni">
+          <li><a href="https://www.youtube.com/watch?v=gndWkaTyo6g&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2" target="_blank">Neden JavaScript? #0</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ga99HJg4c-8&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=2">Kodluyoruz | Front-end Giriş Eğitimi | Tanıtım #0</a></li>
+          <li><a href="https://www.youtube.com/watch?v=tKQB7twxcOY&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=3" target="_blank">Visual Studio Code, HTML, CSS, Bootstrap, GIT ve JavaScript Giriş | Kullanılacak Tüm Dokümanlar #0</a></li>
+          <li><a href="https://www.youtube.com/watch?v=NQthEhNyToY&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=4" target="_blank">Front-End Yol Haritası(roadmap.sh) #0</a></li>
+          <li><a href="https://www.youtube.com/watch?v=x3Vqulh1VtY&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=5" target="_blank">JavaScript | Node.js Kurulumu #0</a></li>
+          <li><a href="https://www.youtube.com/watch?v=p9vBqtM7blk&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=6" target="_blank">JavaScript | Birçok Platformda Hello World ve Hello World'ün Önemi #1</a></li>
+          <li><a href="https://www.youtube.com/watch?v=E739Sr5n2Hw&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=7" target="_blank">JavaScript | Değişken Tanımlama: var, ES6 ile let ve const Değişken Tanımlama Yapısının Kullanımı #2</a></li>
+          <li><a href="https://www.youtube.com/watch?v=oGrfwY_Duz0&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=8" target="_blank">JavaScript | Değişken Tanımlama Kuralları #3        </a></li>
+          <li><a href="https://www.youtube.com/watch?v=QwEISRm7OxY&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=9" target="_blank">JavaScript | Number Veri Turu Kullanımı, Temel Aritmetik İşlemler ve İşlem Önceliği #4        </a></li>
+          <li><a href="https://www.youtube.com/watch?v=JQist2dAI80&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=10" target="_blank">JavaScript | Boolean Veri Türü İle Çalışmak #5</a></li>
+          <li><a href="https://www.youtube.com/watch?v=T-VYmfC3gB0&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=11" target="_blank">JavaScript | Değişken Türünü Kontrol Etmek ve Değişken Türünü Değiştirmek #6</a></li>
+          <li><a href="https://www.youtube.com/watch?v=snHmVqVKpqE&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=12" target="_blank">JavaScript | Template Literals Kullanımı #7</a></li>
+          <li><a href="https://www.youtube.com/watch?v=mXbLdT-XfzU&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=13" target="_blank">JavaScript | String Veri Türü İşlemleri #8</a></li>
+          <li><a href="https://www.youtube.com/watch?v=_OzyMdVDV3g&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=14" target="_blank">JavaScript | Document Object Model(DOM) Nedir? #9</a></li>
+          <li><a href="https://www.youtube.com/watch?v=OXR6Z3Yo3hk&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=15" target="_blank">JavaScript | DOM içerisinden Etiket ve ID ile Öğe Seçimi #10</a></li>
+          <li><a href="https://www.youtube.com/watch?v=4qiEWu593Xs&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=16" target="_blank">JavaScript | prompt ile Kullanıcıdan Bilgi Almak #11</a></li>
+          <li><a href="https://www.youtube.com/watch?v=R0fF3H2GPOA&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=17" target="_blank">JavaScript | Liste içerisindeki Öğeye Erişmek ve Yeni Öğe Eklemek #12</a></li>
+          <li><a href="https://www.youtube.com/watch?v=cAuIZv9cwy4&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=18" target="_blank">JavaScript | DOM'a CSS Class Bilgisi Eklemek veya Çıkarmak #13</a></li>
+          <li><a href="https://www.youtube.com/watch?v=XePaa7gw1qs&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=19" target="_blank">JavaScript | DOM'a CSS Class Bilgisi Eklemek veya Çıkarmak #13</a></li>
+          <li><a href="https://www.youtube.com/watch?v=il2GbdS_Oo0&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=20" target="_blank">JavaScript | Koşul Yapısı Kullanımı(if/else) #15</a></li>
+          <li><a href="https://www.youtube.com/watch?v=JPveQXwuGAs&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=19" target="_blank">JavaScript | Çoklu Koşul Yapısı Kullanımı #16</a></li>
+          <li><a href="https://www.youtube.com/watch?v=0DetgkxkMok&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=22" target="_blank">JavaScript | Ternary Operator(koşul? doğruysa:yanlışsa) ile If Kullanımı #17</a></li>
+         
+          <li><a href="https://www.youtube.com/watch?v=JEzqfTfdidE&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=23" target="_blank">JavaScript | Koşullarla Çalışmak | Bölüm Sonu Egzersizi #18</a></li>
+          <li><a href="https://www.youtube.com/watch?v=_H5weWiEQYw&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=24" target="_blank">JavaScript | Fonksiyon Nedir? Neden Kullanırız? #19</a></li>
+          <li><a href="https://www.youtube.com/watch?v=J4hxdAfxayA&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=25" target="_blank">JavaScript | Fonksiyona Parametre(params) ve Geri dönüş(return) Eklemek #20</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Tv7iBzbMDcI&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=26" target="_blank">JavaScript | Fat Arrow Fonksiyonu Kullanımı #21</a></li>
+      </ul>
+      
+      </div>
+   
+      
+
+
+</body>
+</html>
+
+

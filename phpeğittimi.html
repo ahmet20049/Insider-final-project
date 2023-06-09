@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <div>
+        <link rel="stylesheet" href="php.css">
+    <img src="resim/php.png" alt="image3"  width="150px" height="150px">
+    <h1 style="color:rgb(18, 36, 73);"> PHP ile web geliştirme</h1> 
+        <h2 style="color:rgb(45, 37, 78);">Eğitimin Amacı</h2>
+    <h3 style="color: black;">
+        PHP ile dinamik web siteleri hazırlayabilmeniz ve farklı yazılım projelerini geliştirebilmeniz amaçlanmıştır.
+    </h3>   
+    <h2 style="color:rgb(45, 35, 102);">Eğitimin Özeti</h2>
+    <h3 style="color: black;"> Sürekli gelişen web teknolojilerinin en popüler ve en olmazsa olmaz dillerinden biriside PHP'dir. 
+    Eğitim dahilinde sıfırdan en ileri seviyeye kadar PHP'nin mimarisini, hangi alanlarda kullanıldığı, tüm özelliklerini, tüm metotlarını,
+     tüm fonksiyonlarını ve nesne tabanlı programlama yöntemlerini en ayrıntılı şekilde ve bol örneklerle işlenmektedir. </h3>   
+    <h2 style="color:rgb(45, 37, 153);">Hedef Kitle</h2>
+
+    <h3 style="color: black;"> PHP ile sıfırdan ileri düzeye kadar mükemmel dinamik ve veritabanlı web siteleri geliştirmek isteyen kişiler.
+        Her türlü web tabanlı sistemler yapmak isteyen kişiler.
+        Kendi projelerini geliştirmek isteyen kişiler.
+        Durağan web sayfalarına dinamiklik kazandırmak isteyen kişiler. </h3>
+    
+     </div>
+    <title>Derslerimiz</title>
+    <h1>Eğitimlerimiz</h1>
+    <div>
+    <style>
+         .body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+        
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-list-item {
+            margin-bottom: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #ffffff;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .course-list-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .course-video {
+            position: relative;
+            padding: 10px;
+        }
+        
+        .course-description {
+            padding: 10px;
+        }
+        
+        .course-video iframe {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+        
+        .course-title {
+            font-size: 20px;
+            color: #333333;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        
+        .course-description p {
+            color: #666666;
+        }
+        
+        .completed {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: green;
+            color: #ffffff;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+        
+        .video-container {
+            display: none;
+        }
+        
+        .video-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dersler</h1>
+        <ul class="course-list">
+            <li class="course-list-item" onclick="toggleVideo('video1', 'completed1')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 1</h2>
+                        <strong>PHP | Echo ve Print Kullanımı</strong>
+                        <div class="completed" id="completed1">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video1">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=qSyUucg3UXI&list=PL5HkP8Ta9WU_rgrBqJV4W6uRWChgetXgv&index=2"  frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video2', 'completed2')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 2</h2>
+                        <strong>PHP | Değişken Tanımlama</strong>
+                        <div class="completed" id="completed2">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video2">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=66knBnkkeH4&list=PL5HkP8Ta9WU_rgrBqJV4W6uRWChgetXgv&index=3" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video3', 'completed3')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 3</h2>
+                        <strong>PHP | STRTOLOWER, STRTOUPPER, UCWORDS, UCFIRST Kullanımı</strong>
+                        <div class="completed" id="completed1">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video3">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=22tsBlqnnPA&list=PL5HkP8Ta9WU_rgrBqJV4W6uRWChgetXgv&index=4"  frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video4', 'completed4')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 4</h2>
+                        <strong>PHP | Dizi Tanımlama</strong>
+                        <div class="completed" id="completed4">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video4">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=Ftq_ZpXVdvY&list=PL5HkP8Ta9WU_rgrBqJV4W6uRWChgetXgv&index=5" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video5', 'completed5')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 5</h2>
+                        <strong>PHP | For Döngüsü</strong>
+                        <div class="completed" id="completed5">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video5">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=aysSwu6eEx4&list=PL5HkP8Ta9WU_rgrBqJV4W6uRWChgetXgv&index=7"  frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video6', 'completed6')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 6</h2>
+                        <strong>PHP | FOREACH Kullanımı</strong>
+                        <div class="completed" id="completed6">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video6">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=-w4cOIox-Z4&list=PL5HkP8Ta9WU_rgrBqJV4W6uRWChgetXgv&index=8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video7', 'completed7')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 7</h2>
+                        <strong>PHP | While ve Do While Kullanımı</strong>
+                        <div class="completed" id="completed7">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video7">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=6htr3Gtz2eA&list=PL5HkP8Ta9WU_rgrBqJV4W6uRWChgetXgv&index=11"  frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video8', 'completed8')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 8</h2>
+                        <strong>PHP | If-Elseif Kullanımı</strong>
+                        <div class="completed" id="completed8">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video8">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=rVwvyHSCP5o&list=PL5HkP8Ta9WU_rgrBqJV4W6uRWChgetXgv&index=12" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video9', 'completed9')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 9</h2>
+                        <strong>PHP | Include-Require Kullanımı</strong>
+                        <div class="completed" id="completed7">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video9">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=VHIMUKA2l6A&list=PL5HkP8Ta9WU_rgrBqJV4W6uRWChgetXgv&index=14"  frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video10', 'completed10')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 10</h2>
+                        <strong>PHP | Get ve Post Kullanımı</strong>
+                        <div class="completed" id="completed10">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video10">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=ZxZEVZhnSlg&list=PL5HkP8Ta9WU_rgrBqJV4W6uRWChgetXgv&index=16" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+    <script>
+        function toggleVideo(videoId, completedId) {
+            var videoContainer = document.getElementById(videoId);
+            var completedText = document.getElementById(completedId);
+
+            if (videoContainer.classList.contains('active')) {
+                videoContainer.classList.remove('active');
+            } else {
+                videoContainer.classList.add('active');
+                setTimeout(function() {
+                    completedText.style.opacity = '1';
+                }, 60000);
+            }
+        }
+    </script>
+</body>
+</html>

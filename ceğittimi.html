@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <div>
+        <link rel="stylesheet" href="cshot.css">
+    <img src="resim/download.jpg" alt="image3"  width="150px" height="150px">
+    <h1 style="color:rgb(18, 36, 73);"> C# ile web geliştirme</h1> 
+        <h2 style="color:rgb(45, 37, 78);">Eğitimin Amacı</h2>
+    <h3 style="color: black;">
+        Yazılım, donanım ve bilisim dünyasına ait temel kavramların ögretilmesi.
+        Kursiyerlerin ilerleyen dersler boyunca yazılım yeteneklerini gelistirmesi hedeflenir.
+        Oldukça yaygın bir sekilde kullanılan yazılım dilleri konusunda fikir sahibi olması sağlanır.
+    </h3>   
+    <h2 style="color:rgb(45, 35, 102);">Eğitimin Özeti</h2>
+    <h3 style="color: black;"> Programlamaya giriş
+        Veri tipleri
+        Döngüler
+        Kurumsal yazılım mimariler
+        Tasarım desenleri
+        Sektörde kurumsal organizasyonların kullandığı backend yazma tekniklerini profesyonel bir akış açısıyla öğreneceksiniz.
+        Hayat kurtarıcı Best Practice'lerle dolu bir içerikle karşılaşacaksınız.
+        Özenle hazırlanmış, gerçek hayat projeleri destekli tasarım desenleri bölümü.
+        Sürdürebilir yazılımlar için SOLID bir mimari.
+        Backend yazma teknikleri kursun ileri seviye bölümlerini oluşturuyor.
+        Eğitimin en büyük özelliği, best practice odaklı olması ve syntax bazlı programlama yerine Ne-Ne Zaman-Nerede-Niçin sorularına cevap vermesidir.
+        Örneğin; bir çok programcı "Interface" syntax'ını bilir fakat onu gerçek hayatta kullanmakta zorlanır.
+        Bu eğitim sizi kendinden emin bir programcı yapacak.   
+    </h3>     
+    <h2 style="color:rgb(45, 37, 153);">Hedef Kitle</h2>
+    <h3 style="color: black;">Yazılım geliştirmeye sıfırdan başlayıp profesyonel teknikler öğrenmek isteyenler</h3>
+    </div>
+
+    <title>Derslerimiz</title>
+    <h1>Eğitimlerimiz</h1>
+    <div>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+        
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-list-item {
+            margin-bottom: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #ffffff;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .course-list-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .course-video {
+            position: relative;
+            padding: 10px;
+        }
+        
+        .course-description {
+            padding: 10px;
+        }
+        
+        .course-video iframe {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+        
+        .course-title {
+            font-size: 20px;
+            color: #333333;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        
+        .course-description p {
+            color: #666666;
+        }
+        
+        .completed {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: green;
+            color: #ffffff;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+        
+        .video-container {
+            display: none;
+        }
+        
+        .video-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dersler</h1>
+        <ul class="course-list">
+            <li class="course-list-item" onclick="toggleVideo('video1', 'completed1')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 1</h2>
+                        <strong>C# | Değişken Türleri</strong>
+                        <div class="completed" id="completed1">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video1">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=p4UyEcL7ZWQ&list=PLDUOF2Be-kzmT2ss1tdy0p_xmRVwodQJ5&index=3"  frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video2', 'completed2')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 2</h2>
+                        <strong>C# | Döngüler</strong>
+                        <div class="completed" id="completed2">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video2">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=zYi4MllyCEA&list=PLDUOF2Be-kzmT2ss1tdy0p_xmRVwodQJ5&index=5" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video3', 'completed3')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 3</h2>
+                        <strong>C# | Koşullar</strong>
+                        <div class="completed" id="completed1">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video3">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=wyc721s7fcs&list=PLDUOF2Be-kzmT2ss1tdy0p_xmRVwodQJ5&index=4"  frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video4', 'completed4')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 4</h2>
+                        <strong>C# | Nesneye Dayalı Programlama</strong>
+                        <div class="completed" id="completed4">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video4">
+                    <iframe width="480" height="270" src="youtube.com/watch?v=gKg7inV9Q7Q&list=PLDUOF2Be-kzmT2ss1tdy0p_xmRVwodQJ5&index=6" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video5', 'completed5')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 5</h2>
+                        <strong>C# | Sınıf Tasarımı</strong>
+                        <div class="completed" id="completed5">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video5">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=6mlKezhD_0Y&list=PLDUOF2Be-kzmT2ss1tdy0p_xmRVwodQJ5&index=7"  frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video6', 'completed6')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 6</h2>
+                        <strong>C# | Referans,this operatörü </strong>
+                        <div class="completed" id="completed6">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video6">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=Zrc5Kh0Zn4s&list=PLDUOF2Be-kzmT2ss1tdy0p_xmRVwodQJ5&index=8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video7', 'completed7')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 7</h2>
+                        <strong>C# | Diziler</strong>
+                        <div class="completed" id="completed7">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video7">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=yV3_e0Xvljs&list=PLDUOF2Be-kzmT2ss1tdy0p_xmRVwodQJ5&index=9"  frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video8', 'completed8')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 8</h2>
+                        <strong>C# | String Sınıfı</strong>
+                        <div class="completed" id="completed8">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video8">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=FOKRxDxcQZY&list=PLDUOF2Be-kzmT2ss1tdy0p_xmRVwodQJ5&index=10" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video9', 'completed9')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 9</h2>
+                        <strong>C# | Garbage Collection</strong>
+                        <div class="completed" id="completed7">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video9">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=Y4qQ8Uv7ng4&list=PLDUOF2Be-kzmT2ss1tdy0p_xmRVwodQJ5&index=12"  frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <li class="course-list-item" onclick="toggleVideo('video10', 'completed10')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 10</h2>
+                        <strong>C# | Kalıtım</strong>
+                        <div class="completed" id="completed10">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video10">
+                    <iframe width="480" height="270" src="https://www.youtube.com/watch?v=yDNGgLDZ5dw&list=PLDUOF2Be-kzmT2ss1tdy0p_xmRVwodQJ5&index=18" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+    <script>
+        function toggleVideo(videoId, completedId) {
+            var videoContainer = document.getElementById(videoId);
+            var completedText = document.getElementById(completedId);
+
+            if (videoContainer.classList.contains('active')) {
+                videoContainer.classList.remove('active');
+            } else {
+                videoContainer.classList.add('active');
+                setTimeout(function() {
+                    completedText.style.opacity = '1';
+                }, 60000);
+            }
+        }
+    </script>
+</body>
+</html>
+  

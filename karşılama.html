@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş Ekranı</title>
+    <link rel="stylesheet" type="text/css" href="karşılama.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="buttons">
+            <div class="right-buttons">
+               
+                <button class="login-button" onclick="redirectToLogin()">Giriş Yap</button>
+                <button class="register-button" onclick="redirectToRegister()">Kayıt Ol</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToLogin() {
+            window.location.href = "form.html"; // Giriş yapılacak sayfanın URL'sini buraya yazın
+        }
+        
+        function redirectToRegister() {
+            window.location.href = "form.html"; // Kayıt olunacak sayfanın URL'sini buraya yazın
+        }
+    </script>
+</body>
+</html>

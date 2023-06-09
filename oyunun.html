@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unity-Eğitimi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+        
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-list-item {
+            margin-bottom: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #ffffff;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .course-list-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .course-video {
+            position: relative;
+            padding: 10px;
+        }
+        
+        .course-description {
+            padding: 10px;
+        }
+        
+        .course-video iframe {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+        
+        .course-title {
+            font-size: 20px;
+            color: #333333;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        
+        .course-description p {
+            color: #666666;
+        }
+        
+        .completed {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: green;
+            color: #ffffff;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+        
+        .video-container {
+            display: none;
+        }
+        
+        .video-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Unity Eğitimine Hoşgeldiniz</h1>
+        <h2>Eğitimin Amacı</h2>
+        <h3>Oyun geliştirmek isteyen insanların en anlaşılır şekilde aktarmak</h3>
+        <h2>Hedef Kitle</h2>
+        <h3>15 yaşından büyük bilgisayar kullanmasını orta seviye bilen insanlar için tam ideal eğitim paketimizdir</h3>
+        <ul class="course-list">
+            <!-- Ders 1 - Unity Kurulumu -->
+            <li class="course-list-item" onclick="toggleVideo('video1', 'completed1')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 1 - Unity Kurulumu</h2>
+                        <p>Bu Video da Unity Nasıl yüklenir ve kuruluracağını göstereceğiz</p>
+                        <div class="completed" id="completed1">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video1">
+                    <iframe width="480" height="270" src="https://www.youtube.com/embed/5N0wJ8duRog" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <!-- Ders 2 - Oyunlara Kod Ne için Yazılır ? -->
+            <li class="course-list-item" onclick="toggleVideo('video2', 'completed2')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 2 - Oyunlara Kod Ne için Yazılır ?</h2>
+                        <p>Oyunlara Kod Ne için Yazılır? Sorusunu Oyun Yaparak Cevapladık</p>
+                        <div class="completed" id="completed2">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video2">
+                    <iframe width="480" height="270" src="https://www.youtube.com/embed/izhlX5LhkZ4" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <!-- Ders 3-Unity Arayüzü tanıma -->
+            <li class="course-list-item" onclick="toggleVideo('video3', 'completed3')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 3-Unity Arayüzü tanıma</h2>
+                        <p>Bu video da Unity'nin arayüzünü inceleyip tanışacağız</p>
+                        <div class="completed" id="completed3">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video3">
+                    <iframe width="480" height="270" src="https://www.youtube.com/embed/y7N28coVamw " frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <!-- Ders 4 - Karakter Kontrolü -->
+            <li class="course-list-item" onclick="toggleVideo('video4', 'completed4')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 4 - Karakter Kontrolü</h2>
+                        <p>Bu video da Karakter Kontrolünü işleyeceğiz</p>
+                        <div class="completed" id="completed4">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video4">
+                    <iframe width="480" height="270" src="https://www.youtube.com/embed/mz1MRLSzKgo" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+        </ul>
+        <!-- Ders 5 - Animasyon -->
+        <li class="course-list-item" onclick="toggleVideo('video5', 'completed5')">
+            <div class="course-info">
+                <div class="course-description">
+                    <h2 class="course-title">Ders 5 - Animasyon</h2>
+                    <p>Bu video da Animasyon konusunu işleyeceğiz</p>
+                    <div class="completed" id="completed5">Tamamlandı</div>
+                </div>
+            </div>
+            <div class="video-container" id="video5">
+                <iframe width="480" height="270" src="https://www.youtube.com/embed/9eMP9T6CfqE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </li>
+        <!-- Ders 6 -  Sahne ve UI  -->
+        <li class="course-list-item" onclick="toggleVideo('video6', 'completed6')">
+            <div class="course-info">
+                <div class="course-description">
+                    <h2 class="course-title">Ders 6 - Sahne ve UI </h2>
+                    <p>Bu video da  Sahne ve UI konularını işleyeceğiz</p>
+                    <div class="completed" id="completed6">Tamamlandı</div>
+                </div>
+            </div>
+            <div class="video-container" id="video6">
+                <iframe width="480" height="270" src="https://www.youtube.com/embed/ZgkwJcVsPQI" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </li>
+
+    </div>
+
+    <script>
+        function toggleVideo(videoId, completedId) {
+            var videoContainer = document.getElementById(videoId);
+            var completedText = document.getElementById(completedId);
+
+            if (videoContainer.classList.contains('active')) {
+                videoContainer.classList.remove('active');
+            } else {
+                videoContainer.classList.add('active');
+                setTimeout(function() {
+                    completedText.style.opacity = '1';
+                }, 60000);
+            }
+        }
+    </script>
+</body>
+</html>

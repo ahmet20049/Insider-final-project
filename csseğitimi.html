@@ -1,0 +1,228 @@
+<!--Burası tamamen Ahmet Bahar'ın yaptı kısım E-posta ahmetbahar.0987@gmail.com-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+ <head> 
+  <style>
+    body {
+      background-color: aliceblue;
+    }
+
+    .kot {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .kot-baslik {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .ayni {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .ayni li {
+    margin-bottom: 10px;
+  }
+
+  .ayni li a {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .ayni li a:hover {
+    text-decoration: underline;
+  }
+    .goster {
+      display: block;
+    }
+    .gizle {
+      display: none;
+    }
+    .dugun-temasi {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .dugun-temasi h1 {
+      text-align: center;
+      color: blue;
+    }
+    .dugun-temasi ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .dugun-temasi li {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+    .dugun-temasi button {
+      background-color: blue;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .dugun-temasi .acilir-menu {
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: none;
+    }
+    .dugun-temasi .acilir-menu li {
+      color: #fff;
+    }
+    .dugun-temasi .acilir-menu li:first-child {
+      margin-top: 0;
+    }
+  </style>
+ </head>
+  <body> 
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="csseğittimi.css">
+    <title>CSS Eğitimi</title>
+
+    <!-- Logo and heading -->
+    <div style="display: flex;">
+      <div style="margin-right: 10px;">
+        <img src="https://www.yazilimkoyu.org/wp-content/uploads/2021/07/photo-1-15867704341431006410340-crop-1586770597696426386843-600x401.jpg" alt="Logo" width="450" height="300">
+      </div>
+      <div style="width: 450px;">
+        <br>
+        <br>
+        <br>
+        <h1>CSS</h1>
+        <div class="like-container">
+          <span class="like-icon">&#x1F44D;</span>
+          <span class="like-count">100</span>
+          <span> &#128078;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description section -->
+    <div class="ac">
+      <h1>Açıklama</h1>
+    </div>
+
+    <!-- Eğitim Amacı section -->
+    <div class="kotlar">
+      <div class="kot1">
+        <h2>Eğitim Amacı</h2>
+      </div>
+      <div class="cizgi"></div>
+      <div class="kot1">
+        <p>Efektif tasarımlar ile fonksiyonel web sitelerin geliştirme süreçlerinin aktarılması amaçlanmıştır.</p>
+      </div>
+    </div>
+    <br>
+
+    <!-- Eğitim Özeti section -->
+    <div class="kotlar1">
+      <div class="kot2">
+        <h2>Eğitim Özeti</h2>
+      </div>
+      <div class="cizgi1"></div>
+      <div class="kot2">
+        <p>Sürekli gelişen web teknolojilerinin en popüler ve en olmazsa olmaz dillerinden birisi de CSS'dir. Eğitim dahilinde sıfırdan en ileri seviyeye kadar CSS'in yapısını, hangi alanlarda kullanıldığı, tüm özelliklerini ve tüm değerlerini en ayrıntılı şekilde ve bol örneklerle işlenmektedir.</p>
+      </div>
+    </div>
+    <br>
+
+    <!-- Hedef Kitle section -->
+    <div class="kotlar2">
+      <div class="kot3">
+        <h2>Hedef Kitle</h2>
+        <li>CSS3 ile sıfırdan ileri düzeye kadar mükemmel tasarım geliştirmek isteyen kişiler.</li>
+        <li>Full Responsive (tüm cihazlara duyarlı) web siteleri hazırlamak isteyen kişiler.</li>
+      </div>
+
+
+
+      <div class="dugun-temasi">
+        <h1>CSS  Sürümleri</h1>
+        <button onclick="toggleMenu()">Sürümler</button>
+        <ul id="acilir-menu" class="acilir-menu">
+          <li>HTML 1.0: 1993 yılında yayımlanan bu sürüm, temel HTML öğelerini içeriyordu.</li>
+          <li>HTML 2.0: 1995 yılında yayımlanan bu sürüm, tablolara ve form alanlarına destek ekledi. CSS kullanımı da bu sürümle başladı.</li>
+          <li>HTML 3.2: 1997 yılında yayımlanan bu sürüm, çerçeveler (frames), katmanlar (layers), ve stil özelliklerini içeriyordu.</li>
+          <li>HTML 4.01: 1999 yılında yayımlanan bu sürüm, XHTML'e geçişi hedefledi ve birçok yenilik getirdi.</li>
+        </ul>
+      </div>
+    
+      <script>
+        function toggleMenu() {
+          var acilirMenu = document.getElementById("acilir-menu");
+          if (acilirMenu.style.display === "none") {
+            acilirMenu.style.display = "block";
+          } else {
+            acilirMenu.style.display = "none";
+          }
+        }
+      </script>
+
+
+
+
+
+
+
+
+
+
+      <div class="kot">
+        <h2 class="kot-baslik">Eğitimiz</h2>
+        
+        <ul class="ayni">
+          <li><a href="https://www.youtube.com/watch?v=TjcMDa4Bnu4&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq" target="_blank">0- CSS Nedir - Neden Kullanmalıyız? | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=I2Y6Nv5wrKE&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=2">1- HTML Sayfası İçerisinde CSS'i Çağırmak | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Ut6vKnyb6a8&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=3" target="_blank">2- ID ve Class Seçicileri | Önemli Ders | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Tb9bc7PDfmU&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=4" target="_blank">3- Yorum Satırı Nedir, Nasıl Kullanılır? | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Ul_wyz82HjA&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=5" target="_blank">4- Renklendirme Yöntemleri | Color | RGB | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=gtcJlzXLV84&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=6" target="_blank">5- Nedir Bu Div? | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=B5hW8Wf6UVk&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=7" target="_blank">6- Arka Plan Özellikleri | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=wn1epBUYMOw&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=8" target="_blank">7- Border ve Radius Kullanımı | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=siJGGQ33InI&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=9" target="_blank">8- Width ve Height Özellikleri | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=YNkYvVCoD5Q&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=10" target="_blank">9- Margin Özelliği | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=md44C6YxWF4&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=11" target="_blank">10- Padding Özelliği | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=GHAvUGs6W7U&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=12" target="_blank">11- Display: Inline & Block & Inline Block</a></li>
+          <li><a href="https://www.youtube.com/watch?v=NoeIUIA5IkY&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=13" target="_blank">12- Text & Font Özellikleri | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ncoxCQAmoP0&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=14" target="_blank">13- Parent - Child İlişkisi | Önemli Ders | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ZfNTc3PWZIM&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=15" target="_blank">14- Seçiciler (Selectors) | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=tUYVGdONbew&list=PLdz-gps4GThxQYK06gFfEBFR6xAuvDlz7&index=18" target="_blank">15- Web Sayfasına İcon Eklemek | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=p_1eaK8ZpDA&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=17" target="_blank">16- Link Özellikleri | Active | Hover | Visited | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=tzAcbtgA4C0&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=16" target="_blank">17- Liste İcon Değiştirme | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=p_1eaK8ZpDA&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=17" target="_blank">18- Link Özellikleri | Active | Hover | Visited | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=rAH7bFENI2M&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=18" target="_blank">19- Liste İcon Değiştirme | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=JPveQXwuGAs&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=19" target="_blank">20- Tablo Özellikleri | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=xjS8M1bvq_8&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=20" target="_blank">21- Z-Index Özelliği | Katman Sırası | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=P9duxr5IaSk&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=21" target="_blank">22- Overflow(Taşma) Özelliği | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=HzX-Qnd6kgI&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=22" target="_blank">23- Dikey Menü Yapımı | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=XHlqGF0URQ0&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=23" target="_blank">24- Yatay Menü Yapımı | CSS Dersleri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=FaMO0OUanv0&list=PLURN6mxdcwL_QVUfw37hf-PfVXnVwlRRq&index=24" target="_blank">25-Açılır(Dropdown) Menü Yapımı | CSS Dersleri</a></li>
+      </ul>
+      
+      </div>
+      
+      
+
+
+</body>
+</html>

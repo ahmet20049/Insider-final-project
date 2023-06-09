@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python-Eğitimi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+        
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-list-item {
+            margin-bottom: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #ffffff;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .course-list-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .course-video {
+            position: relative;
+            padding: 10px;
+        }
+        
+        .course-description {
+            padding: 10px;
+        }
+        
+        .course-video iframe {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+        
+        .course-title {
+            font-size: 20px;
+            color: #333333;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        
+        .course-description p {
+            color: #666666;
+        }
+        
+        .completed {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: green;
+            color: #ffffff;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+        
+        .video-container {
+            display: none;
+        }
+        
+        .video-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Python Eğitimine Hoşgeldiniz</h1>
+        <h2>Eğitimin Amacı</h2>
+        <h3>Yapay Zeka ortaklığıyla çağımıza uygun 3d ve 2d oyun yapımını anlaşılır dilde öğretmimi</h3>
+        <h2>Hedef Kitle</h2>
+        <h3>Pthon kullanımını temel seviye bilen ileri seviye taşımak isteyenler</h3>
+        <ul class="course-list">
+            <!-- Ders 1 - Python Kurulumu -->
+            <li class="course-list-item" onclick="toggleVideo('video1', 'completed1')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 1 - Python Kurulumu</h2>
+                        <p>Bu Video da Python Nasıl yüklenir ve kuruluracağını göstereceğiz</p>
+                        <div class="completed" id="completed1">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video1">
+                    <iframe width="480" height="270" src="https://www.youtube.com/embed/Mje0H2cPb20" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <!-- Ders 2 - Python da Yılan Oyunu Yapımı -->
+            <li class="course-list-item" onclick="toggleVideo('video2', 'completed2')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 2 - Python da Yılan Oyunu Yapımı</h2>
+                        <p>Bu video da python ile yılan oyunu yapımı görücez</p>
+                        <div class="completed" id="completed2">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video2">
+                    <iframe width="480" height="270" src="https://www.youtube.com/embed/r7v9FQkN04k" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <!-- Ders 3-Pyton ile Minecraft Yapımı -->
+            <li class="course-list-item" onclick="toggleVideo('video3', 'completed3')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 3-Pyton ile Minecraft Yapımı</h2>
+                        <p>Bu video da python kullanarak Minecraft yapımını öğrenicez</p>
+                        <div class="completed" id="completed3">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video3">
+                    <iframe width="480" height="270" src="https://www.youtube.com/embed/ZKxnif1f-DE" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+            <!-- Ders 4 - Python ile Pinpon Oyunu Yapımı -->
+            <li class="course-list-item" onclick="toggleVideo('video4', 'completed4')">
+                <div class="course-info">
+                    <div class="course-description">
+                        <h2 class="course-title">Ders 4 - Python ile Pinpon Oyunu Yapımı</h2>
+                        <p>Bu video da python kullanarak Pinpon oyununun yapımını öğrenicez</p>
+                        <div class="completed" id="completed4">Tamamlandı</div>
+                    </div>
+                </div>
+                <div class="video-container" id="video4">
+                    <iframe width="480" height="270" src="https://www.youtube.com/embed/oBqhGuE3tFA" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </li>
+        </ul>
+        <!-- Ders 5 - Python ile XOX Yapımı -->
+        <li class="course-list-item" onclick="toggleVideo('video5', 'completed5')">
+            <div class="course-info">
+                <div class="course-description">
+                    <h2 class="course-title">Ders 5 - Python ile XOX Yapımı</h2>
+                    <p>Bu video da python kullanarak XOX Oyununun yapımını öğrenicez</p>
+                    <div class="completed" id="completed5">Tamamlandı</div>
+                </div>
+            </div>
+            <div class="video-container" id="video5">
+                <iframe width="480" height="270" src="https://www.youtube.com/embed/gSGIqB4XbcU" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </li>
+        <!-- Ders 6 - Uzay Savaşı Oyunu Yapımı -->
+        <li class="course-list-item" onclick="toggleVideo('video6', 'completed6')">
+            <div class="course-info">
+                <div class="course-description">
+                    <h2 class="course-title">Ders 6 - Uzay Savaşı Oyunu Yapımı</h2>
+                    <p>Bu video da python kullanarak Uzay Savaşı Oyununun yapımını öğreneceğiz</p>
+                    <div class="completed" id="completed6">Tamamlandı</div>
+                </div>
+            </div>
+            <div class="video-container" id="video6">
+                <iframe width="480" height="270" src="https://www.youtube.com/embed/wxentE02egc" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </li>
+
+    </div>
+
+    <script>
+        function toggleVideo(videoId, completedId) {
+            var videoContainer = document.getElementById(videoId);
+            var completedText = document.getElementById(completedId);
+
+            if (videoContainer.classList.contains('active')) {
+                videoContainer.classList.remove('active');
+            } else {
+                videoContainer.classList.add('active');
+                setTimeout(function() {
+                    completedText.style.opacity = '1';
+                }, 60000);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!--Burası tamamen Ahmet Bahar'ın yaptı kısım E-posta ahmetbahar.0987@gmail.com-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Helvetica;
+        }
+        
+        body {
+            transition: background-color 0.5s, color 0.5s, font-family 0.5s;
+        }
+        
+        #mydiv {
+            height: 600px;
+            padding: 10px;
+            line-height: 2em;
+            font-size: 1em;
+        }
+        
+        #togBut {
+            border: 10px solid white;
+            border-radius: 25px;
+            background: #dead28;
+            padding: 15px;
+        }
+        
+        #togBut:hover {
+            background: grey;
+            color: black;
+        }
+        
+        .night-mode {
+            color: #fff;
+            background-color: #000;
+            font-family: "Times New Roman", serif;
+        }
+    </style>
+</head>
+<body>
+    <button id="togBut" data-target="mydiv" data-mode="on">Toggle Night Mode</button>
+
+   
+
+   <script>
+      (function() {
+        function toggleNightMode() {
+           var elem = document.getElementById(this.dataset.target);
+           var body = document.body;
+                                        
+                                        if (this.dataset.mode === 'off') {
+                          body.classList.remove('night-mode');
+                  this.dataset.mode = 'on';
+      } else {
+         body.classList.add('night-mode');     
+       this.dataset.mode = 'off';
+              }
+          }
+                                    
+         document.getElementById('togBut').addEventListener('click', toggleNightMode);
+         })();
+     </script>
+</body>
+</html>
